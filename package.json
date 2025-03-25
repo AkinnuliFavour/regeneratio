@@ -1,0 +1,8 @@
+{
+	"name": "regeneratio",
+	"private": true,
+	"workspaces": [
+		"frontend",
+		"backend"
+	]
+}
