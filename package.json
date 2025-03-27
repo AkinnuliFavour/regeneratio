@@ -1,0 +1,8 @@
+{
+	"name": "my-fullstack-project",
+	"private": true,
+	"workspaces": [
+		"frontend",
+		"backend"
+	]
+}
