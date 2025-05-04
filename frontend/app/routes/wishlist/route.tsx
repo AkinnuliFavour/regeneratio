@@ -136,7 +136,7 @@ export default function Wishlist() {
 				{/* Banner - "Ends For You" */}
 				<div className="mb-8 flex justify-between items-center">
 					<div className="flex items-center">
-						<div className="bg-red-600 h-6 w-2 mr-2"></div>
+						<div className="bg-blue-600 h-6 w-2 mr-2"></div>
 						<h2 className="text-sm font-medium">Ends For You</h2>
 					</div>
 					<Button
