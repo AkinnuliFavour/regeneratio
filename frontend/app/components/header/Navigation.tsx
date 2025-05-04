@@ -9,8 +9,11 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
+import { useNavigate } from "@remix-run/react";
 
 export default function Navigation() {
+	const navigate = useNavigate();
+
 	return (
 		<header className="bg-white shadow-sm">
 			<div className="container mx-auto px-4">
@@ -29,28 +32,16 @@ export default function Navigation() {
 							Home
 						</Link>
 						<Link
-							to="/products"
+							to="/about"
 							className="text-sm font-medium text-gray-500 hover:text-gray-700"
 						>
-							Products
+							About
 						</Link>
 						<Link
-							to="/categories"
+							to="/gadgets"
 							className="text-sm font-medium text-gray-500 hover:text-gray-700"
 						>
 							Categories
-						</Link>
-						<Link
-							to="/deals"
-							className="text-sm font-medium text-gray-500 hover:text-gray-700"
-						>
-							Deals
-						</Link>
-						<Link
-							to="/contact"
-							className="text-sm font-medium text-gray-500 hover:text-gray-700"
-						>
-							Contact
 						</Link>
 					</nav>
 
@@ -70,15 +61,18 @@ export default function Navigation() {
 
 					{/* User Actions */}
 					<div className="flex items-center space-x-4">
-						<button className="text-gray-500 hover:text-gray-700">
+						<Link to="/wishlist" className="text-gray-500 hover:text-gray-700">
 							<Heart className="h-6 w-6" />
-						</button>
-						<button className="text-gray-500 hover:text-gray-700 relative">
+						</Link>
+						<Link
+							to="/cart"
+							className="text-gray-500 hover:text-gray-700 relative"
+						>
 							<ShoppingCart className="h-6 w-6" />
-							<span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+							<span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
 								3
 							</span>
-						</button>
+						</Link>
 						<DropdownMenu>
 							<DropdownMenuTrigger asChild>
 								<button className="text-gray-500 hover:text-gray-700">

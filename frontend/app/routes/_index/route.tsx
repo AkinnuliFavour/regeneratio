@@ -14,7 +14,7 @@ import {
 
 // Define types for our product data
 type Product = {
-	id: string;
+	id: string | number;
 	name: string;
 	price: number;
 	oldPrice?: number;
@@ -220,7 +220,7 @@ export default function Index() {
 				</div>
 
 				<div className="text-center mt-8">
-					<Button variant="default" className="bg-red-600 hover:bg-red-700">
+					<Button variant="default" className="bg-blue-500 hover:bg-blue-600">
 						View All Products
 					</Button>
 				</div>
@@ -254,7 +254,7 @@ export default function Index() {
 				</div>
 
 				<div className="text-center mt-8">
-					<Button variant="default" className="bg-red-600 hover:bg-red-700">
+					<Button variant="default" className="bg-blue-500 hover:bg-blue-600">
 						View All Products
 					</Button>
 				</div>
@@ -293,7 +293,7 @@ export default function Index() {
 				</div>
 
 				<div className="text-center mt-8">
-					<Button variant="default" className="bg-red-600 hover:bg-red-700">
+					<Button variant="default" className="bg-blue-500 hover:bg-blue-600">
 						View All Products
 					</Button>
 				</div>
@@ -378,7 +378,7 @@ function ProductCard({ product }: { product: Product }) {
 			onMouseLeave={() => setIsHovered(false)}
 		>
 			{product.oldPrice && (
-				<div className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+				<div className="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
 					{Math.round((1 - product.price / product.oldPrice) * 100)}% OFF
 				</div>
 			)}
