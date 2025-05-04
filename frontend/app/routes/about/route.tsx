@@ -62,9 +62,9 @@ export default function Index() {
 					</CardContent>
 				</Card>
 
-				<Card className="border-none shadow-sm bg-red-500 text-white">
+				<Card className="border-none shadow-sm bg-blue-500 text-white">
 					<CardContent className="flex flex-col items-center justify-center pt-6">
-						<div className="bg-red-400 rounded-full p-3 mb-3">
+						<div className="bg-blue-400 rounded-full p-3 mb-3">
 							<ShoppingBag size={24} className="text-white" />
 						</div>
 						<h3 className="text-2xl font-bold">33k</h3>
